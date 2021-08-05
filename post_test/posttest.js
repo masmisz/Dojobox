@@ -36,8 +36,9 @@ var namaBarang = prompt('Masukkan nama barang:');
 var hargaBarang = parseInt(prompt('Masukkan harga barang:'));
 var jumlahBarang = parseInt(prompt('Masukkan jumlah barang:'));
 var i = prompt ('% diskon:');
-var discount = i * hargaBarang / 100;
-var total  = hargaBarang - discount;
+var discount = (i / 100 ) * jumlahBarang * hargaBarang;
+var totalHarga = hargaBarang * jumlahBarang;
+var total  = totalHarga - discount;
 
 document.write('Nama Barang : ' + namaBarang +'<br>');
 document.write('Harga Barang : ' + hargaBarang +'<br>');
