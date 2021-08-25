@@ -11,10 +11,10 @@ describe('Tugas 2 (Cypress)', function () {
         cy.get('[value = "male"]').check().should('be.checked')
     })
 
-    it('checkboxes', function () {
+   it('checkboxes', function () {
         cy.visit('https://ultimateqa.com/simple-html-elements-for-automation/ ')
-        cy.get('input[type = "checkbox"]').check('Bike')
-        cy.get('input[type = "checkbox"]').check('Car')
+        cy.get('input[type = "checkbox"]').check('Bike').should('have.value','Bike')
+        cy.get('input[type = "checkbox"]').check('Car').should('have.value','Car')
     })
 
     it('dropdown', function () {
