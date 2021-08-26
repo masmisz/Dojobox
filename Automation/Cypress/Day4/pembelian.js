@@ -1,0 +1,15 @@
+describe('Pembelian', function () {
+    it('Beli-1', function () {
+        cy.visit('https://www.demoblaze.com/index.html')
+        cy.get(':nth-child(2) > .card > .card-block > .card-title > .hrefch').click()
+        cy.get('.col-sm-12 > .btn').click()
+        cy.get('#cartur').click()
+        cy.get('.col-lg-1 > .btn').click()
+        cy.get('#name').type('dojo-mas')
+        cy.get('#city').type('Jakarta')
+        cy.get('#card').type('123456789012345')
+        cy.get('#month').type('March')
+        cy.get('#year').type('2026')
+        cy.get('#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+    })
+})
