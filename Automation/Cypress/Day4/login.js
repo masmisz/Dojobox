@@ -5,5 +5,6 @@ describe('Login', function () {
         cy.get('#loginusername').type('dojo-mas').should('have.value', 'dojo-mas')
         cy.get('#loginpassword').type('dojo-mas').should('have.value', 'dojo-mas')
         cy.get('#logInModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+        cy.get('#nameofuser').should('be.visible');
     })
 })
