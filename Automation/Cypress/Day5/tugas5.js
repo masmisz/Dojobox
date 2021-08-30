@@ -35,14 +35,15 @@ describe('Login Demoblaze', function () {
         // cy.get('.active > .nav-link').click()  
         cy.wait(5000)
     })
-
-
-    cy.get('#cartur').click()
-    cy.get('.col-lg-1 > .btn').click()
-    cy.get('#name').type('dojo-mas').should('have.value', 'dojo-mas')
-    cy.get('#city').type('Jakarta').should('have.value', 'Jakarta')
-    cy.get('#card').type('123456789012345').should('have.value', '123456789012345')
-    cy.get('#month').type('March').should('have.value', 'March')
-    cy.get('#year').type('2026').should('have.value', '2026')
-    cy.get('#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+ 
+    it('BAYAR', function () {
+        cy.get('#cartur').click()
+        cy.get('.col-lg-1 > .btn').click()
+        cy.get('#name').type('dojo-mas').should('have.value', 'dojo-mas')
+        cy.get('#city').type('Jakarta').should('have.value', 'Jakarta')
+        cy.get('#card').type('123456789012345').should('have.value', '123456789012345')
+        cy.get('#month').type('March').should('have.value', 'March')
+        cy.get('#year').type('2026').should('have.value', '2026')
+        cy.get('#orderModal > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+    })
 })
