@@ -7,13 +7,13 @@ describe('automation-practice-form ', function () {
         cy.get('#userEmail').type('m@mail.com')
         cy.get('#genterWrapper > .col-md-9 > :nth-child(1)').click()
         cy.get('#userNumber').type('0822118872')
-        // cy.get('.subjects-auto-complete__value-container').type('Tets Complete')
         cy.get('#hobbiesWrapper > .col-md-9 > :nth-child(1)').click()
         cy.get('#uploadPicture').attachFile('gmail.jpg')
         cy.get('#currentAddress').type('VDT Tangsel')
         cy.contains('Select State').click()
-
-        // cy.get('select').select('user-1')
+        cy.get('#react-select-3-option-0').click()
+        cy.contains('Select City').click()
+        cy.get('#react-select-4-option-0').click()
         cy.get('#submit').click()
     })
 
