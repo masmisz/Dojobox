@@ -7,6 +7,8 @@ describe('automation-practice-form ', function () {
         cy.get('#userEmail').type('m@mail.com')
         cy.get('#genterWrapper > .col-md-9 > :nth-child(1)').click()
         cy.get('#userNumber').type('0822118872')
+        cy.get('#dateOfBirthInput', {force: true}).click().type('{selectall}', '{backspace}').type('01 May 2000').type('{enter}')
+        cy.get('.subjects-auto-complete__value-container').type('Wakanda{enter}')
         cy.get('#hobbiesWrapper > .col-md-9 > :nth-child(1)').click()
         cy.get('#uploadPicture').attachFile('gmail.jpg')
         cy.get('#currentAddress').type('VDT Tangsel')
@@ -17,7 +19,7 @@ describe('automation-practice-form ', function () {
         cy.get('#submit').click()
     })
 
-    Cypress.on('uncaught:exception', (err, runnable)=>{
+    Cypress.on('uncaught:exception', (err, runnable) => {
         return false
     })
 })
